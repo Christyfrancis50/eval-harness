@@ -10,7 +10,7 @@
     "eval": "tsx scripts/eval.ts",
     "eval:check": "tsx scripts/eval.ts --check --no-save",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "@huggingface/transformers": "^4.3.2",
