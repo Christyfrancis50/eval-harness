@@ -2,6 +2,8 @@
 
 **Measure search and AI pipelines against a labelled test set, track quality over time, and stop regressions in CI.**
 
+**Live dashboard:** https://eval-harness-three.vercel.app
+
 Most AI features ship on "it looked fine when I tried three queries". This project replaces that with numbers. You give it a test set of inputs with known correct answers and one or more pipelines (a keyword search, an embedding search, an LLM…). It runs each pipeline on every example, scores the results, saves each run as a JSON file, and shows everything on a dashboard: which pipeline wins, in which categories, what changed since the last run, and which examples broke.
 
 The bundled demo answers a real question from a freight app I built (NexusTrade): *given a goods description, which Harmonized System (HS) customs code is it?*
