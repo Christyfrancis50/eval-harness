@@ -1,0 +1,3020 @@
+{
+ "id": "20261124-105306-hs-semantic",
+ "createdAt": "2026-11-24T10:53:06.730Z",
+ "sessionId": "20261124-105304",
+ "datasetId": "hs-classification",
+ "datasetHash": "99570e9195",
+ "pipelineId": "hs-semantic",
+ "pipelineName": "Semantic (embeddings)",
+ "gitSha": "d569b98-dirty",
+ "metrics": {
+  "n": 80,
+  "top1": 0.625,
+  "top3": 0.825,
+  "top5": 0.8625,
+  "mrr": 0.7233,
+  "errors": 0,
+  "latencyMeanMs": 16.6,
+  "latencyP95Ms": 22.1
+ },
+ "byTag": {
+  "chemicals": {
+   "n": 9,
+   "top1": 0.5556
+  },
+  "consumer": {
+   "n": 11,
+   "top1": 0.6364
+  },
+  "electrical": {
+   "n": 12,
+   "top1": 0.5833
+  },
+  "food": {
+   "n": 13,
+   "top1": 0.7692
+  },
+  "jargon": {
+   "n": 7,
+   "top1": 0.2857
+  },
+  "machinery": {
+   "n": 11,
+   "top1": 0.5455
+  },
+  "metals": {
+   "n": 5,
+   "top1": 0.8
+  },
+  "textiles": {
+   "n": 7,
+   "top1": 0.8571
+  },
+  "vehicles": {
+   "n": 5,
+   "top1": 0.6
+  }
+ },
+ "results": [
+  {
+   "id": "hs-001",
+   "input": "Centrifugal water pump, electric, 2 HP, for domestic use",
+   "expected": "8413",
+   "tags": [
+    "machinery"
+   ],
+   "predictions": [
+    {
+     "label": "841370",
+     "score": 0.6816,
+     "detail": "Pumps; centrifugal, n.e.c. in heading no. 8413, for liquids"
+    },
+    {
+     "label": "850980",
+     "score": 0.6447,
+     "detail": "Electro-mechanical domestic appliances; with self-contained electric motor, other than vacuum cleaners of heading 85.08, n.e.c. in heading no. 8509"
+    },
+    {
+     "label": "842121",
+     "score": 0.6432,
+     "detail": "Machinery; for filtering or purifying water"
+    },
+    {
+     "label": "851671",
+     "score": 0.6335,
+     "detail": "Electro-thermic appliances; coffee or tea makers, of a kind used for domestic purposes"
+    },
+    {
+     "label": "845012",
+     "score": 0.6204,
+     "detail": "Washing machines; household or laundry-type, with built-in centrifugal drier, (not fully-automatic), of a dry linen capacity not exceeding 10kg"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 15.7
+  },
+  {
+   "id": "hs-002",
+   "input": "Gear pump assembly, cast iron, 40 L/min",
+   "expected": "8413",
+   "tags": [
+    "machinery"
+   ],
+   "predictions": [
+    {
+     "label": "731816",
+     "score": 0.6233,
+     "detail": "Iron or steel; threaded nuts"
+    },
+    {
+     "label": "730300",
+     "score": 0.6213,
+     "detail": "Cast iron; tubes, pipes and hollow profiles"
+    },
+    {
+     "label": "730711",
+     "score": 0.6183,
+     "detail": "Cast iron; cast fittings, of non-malleable cast iron"
+    },
+    {
+     "label": "731021",
+     "score": 0.6144,
+     "detail": "Cans; which are to be closed by soldering or crimping, for any material (excluding compressed or liquefied gas), less than 50l capacity, of iron or steel"
+    },
+    {
+     "label": "730511",
+     "score": 0.6133,
+     "detail": "Iron or steel (excluding cast iron); line pipe of a kind used for oil or gas pipelines (not seamless), longitudinally submerged arc welded, having circular cross-sections, external diameter exceeds 406.4mm"
+    }
+   ],
+   "rank": null,
+   "latencyMs": 13.8
+  },
+  {
+   "id": "hs-003",
+   "input": "Stainless steel ball valves, 2 inch",
+   "expected": "8481",
+   "tags": [
+    "machinery"
+   ],
+   "predictions": [
+    {
+     "label": "722020",
+     "score": 0.6712,
+     "detail": "Steel, stainless; flat-rolled, width less than 600mm, cold-rolled"
+    },
+    {
+     "label": "730729",
+     "score": 0.6695,
+     "detail": "Steel, stainless; tube or pipe fittings, n.e.c. in item no. 7307.2"
+    },
+    {
+     "label": "722300",
+     "score": 0.6657,
+     "detail": "Steel, stainless; wire"
+    },
+    {
+     "label": "730511",
+     "score": 0.6626,
+     "detail": "Iron or steel (excluding cast iron); line pipe of a kind used for oil or gas pipelines (not seamless), longitudinally submerged arc welded, having circular cross-sections, external diameter exceeds 406.4mm"
+    },
+    {
+     "label": "721931",
+     "score": 0.6587,
+     "detail": "Steel, stainless; flat-rolled, width 600mm or more, cold-rolled or cold-reduced, of a thickness of 4.75mm or more"
+    }
+   ],
+   "rank": null,
+   "latencyMs": 15.2
+  },
+  {
+   "id": "hs-004",
+   "input": "Split-unit wall air conditioners 1.5 ton",
+   "expected": "8415",
+   "tags": [
+    "machinery"
+   ],
+   "predictions": [
+    {
+     "label": "841451",
+     "score": 0.6229,
+     "detail": "Fans; table, floor, wall, window, ceiling or roof fans, with a self-contained electric motor of an output not exceeding 125W"
+    },
+    {
+     "label": "841510",
+     "score": 0.6176,
+     "detail": "Air conditioning machines; comprising a motor-driven fan and elements for changing the temperature and humidity, of a kind designed to be fixed to a window, wall, ceiling or floor, self-contained or split-system"
+    },
+    {
+     "label": "700800",
+     "score": 0.6036,
+     "detail": "Glass; multiple-walled insulating units of glass"
+    },
+    {
+     "label": "732290",
+     "score": 0.5984,
+     "detail": "Air heaters and hot air distributors, (not electrically heated), incorporating a motor-driven fan or blower and parts thereof, of iron or steel"
+    },
+    {
+     "label": "850790",
+     "score": 0.5871,
+     "detail": "Electric accumulators; parts n.e.c. in heading no. 8507"
+    }
+   ],
+   "rank": 2,
+   "latencyMs": 19.5
+  },
+  {
+   "id": "hs-005",
+   "input": "Laptops 14-inch, 1.3 kg",
+   "expected": "8471",
+   "tags": [
+    "machinery"
+   ],
+   "predictions": [
+    {
+     "label": "847130",
+     "score": 0.5775,
+     "detail": "Automatic data processing machines; portable, weighing not more than 10kg, consisting of at least a central processing unit, a keyboard and a display"
+    },
+    {
+     "label": "880212",
+     "score": 0.5722,
+     "detail": "Helicopters, except unmanned; of an unladen weight exceeding 2000kg"
+    },
+    {
+     "label": "847330",
+     "score": 0.5692,
+     "detail": "Machinery; parts and accessories (other than covers, carrying cases and the like) of the machines of heading no. 8471"
+    },
+    {
+     "label": "830400",
+     "score": 0.5634,
+     "detail": "Office equipment; filing cabinets, card-index cabinets, paper trays, paper rests, pen trays, office-stamp stands and similar office or desk equipment, of base metal, other than office furniture of heading no. 9403"
+    },
+    {
+     "label": "481490",
+     "score": 0.5633,
+     "detail": "Wallpaper and similar wall coverings and window transparencies of paper; n.e.c. in heading 4814"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 15.2
+  },
+  {
+   "id": "hs-006",
+   "input": "Excavator bucket teeth and adapters",
+   "expected": "8431",
+   "tags": [
+    "machinery"
+   ],
+   "predictions": [
+    {
+     "label": "842959",
+     "score": 0.6846,
+     "detail": "Mechanical shovels, excavators and shovel loaders; n.e.c. in item no. 8429.50"
+    },
+    {
+     "label": "843069",
+     "score": 0.6712,
+     "detail": "Machinery; for moving, levelling, scraping, grading, excavating earth minerals or ores; not self propelled n.e.c in 84.30"
+    },
+    {
+     "label": "842691",
+     "score": 0.6512,
+     "detail": "Cranes and derricks; designed for mounting on road vehicles"
+    },
+    {
+     "label": "890400",
+     "score": 0.6379,
+     "detail": "Tugs and pusher craft"
+    },
+    {
+     "label": "820412",
+     "score": 0.6208,
+     "detail": "Tools, hand; hand-operated spanners and wrenches (including torque meter wrenches but not including tap wrenches), adjustable"
+    }
+   ],
+   "rank": null,
+   "latencyMs": 21.6
+  },
+  {
+   "id": "hs-007",
+   "input": "Deep-groove ball bearings, 6204 series",
+   "expected": "8482",
+   "tags": [
+    "machinery"
+   ],
+   "predictions": [
+    {
+     "label": "848210",
+     "score": 0.7258,
+     "detail": "Ball bearings"
+    },
+    {
+     "label": "848320",
+     "score": 0.6109,
+     "detail": "Bearing housings, incorporating ball or roller bearings"
+    },
+    {
+     "label": "843141",
+     "score": 0.6108,
+     "detail": "Machinery parts; buckets, shovels, grabs and grips, for the machinery of heading no. 8426 and 8430"
+    },
+    {
+     "label": "844833",
+     "score": 0.6057,
+     "detail": "Machines; parts and accessories of machines or auxiliary machinery, spindles, spindle flyers, spinning rings and ring travellers"
+    },
+    {
+     "label": "660320",
+     "score": 0.6031,
+     "detail": "Umbrella frames; including frames mounted on shafts (sticks)"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 13.1
+  },
+  {
+   "id": "hs-008",
+   "input": "Household refrigerator-freezers, 300 litre, combined",
+   "expected": "8418",
+   "tags": [
+    "machinery"
+   ],
+   "predictions": [
+    {
+     "label": "841810",
+     "score": 0.6941,
+     "detail": "Refrigerators and freezers; combined refrigerator-freezers, fitted with separate external doors, electric or other"
+    },
+    {
+     "label": "392510",
+     "score": 0.6569,
+     "detail": "Plastics; builders' ware, reservoirs, tanks, vats and similar containers of a capacity exceeding 300 litres"
+    },
+    {
+     "label": "732182",
+     "score": 0.6234,
+     "detail": "Domestic appliances; non-electric, (other than cookers and plate warmers), for liquid fuel, of iron or steel"
+    },
+    {
+     "label": "030391",
+     "score": 0.6227,
+     "detail": "Fish; frozen, livers, roes and milt"
+    },
+    {
+     "label": "730900",
+     "score": 0.6101,
+     "detail": "Reservoirs, tanks, vats and similar containers; for any material (excluding compressed or liquefied gas), of iron or steel, capacity exceeding 300l, whether or not lined or heat insulated"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 13.2
+  },
+  {
+   "id": "hs-009",
+   "input": "Front-loading washing machines, 8 kg capacity",
+   "expected": "8450",
+   "tags": [
+    "machinery"
+   ],
+   "predictions": [
+    {
+     "label": "845020",
+     "score": 0.7044,
+     "detail": "Washing machines; household or laundry-type, of a dry linen capacity exceeding 10kg"
+    },
+    {
+     "label": "845129",
+     "score": 0.6647,
+     "detail": "Drying machines; of a dry linen capacity exceeding 10kg"
+    },
+    {
+     "label": "841013",
+     "score": 0.618,
+     "detail": "Turbines; hydraulic turbines and water wheels, of a power exceeding 10000kW"
+    },
+    {
+     "label": "842290",
+     "score": 0.6047,
+     "detail": "Machinery; parts of machinery of heading no. 8422"
+    },
+    {
+     "label": "821000",
+     "score": 0.597,
+     "detail": "Tools; hand-operated mechanical appliances, weighing 10kg or less, used in the preparation, conditioning or serving of food or drink"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 13.6
+  },
+  {
+   "id": "hs-010",
+   "input": "Forklift trucks, electric, 2.5 tonne",
+   "expected": "8427",
+   "tags": [
+    "machinery"
+   ],
+   "predictions": [
+    {
+     "label": "842710",
+     "score": 0.7535,
+     "detail": "Fork-lift and other works trucks; fitted with lifting or handling equipment, self-propelled by electric motor"
+    },
+    {
+     "label": "842649",
+     "score": 0.6973,
+     "detail": "Cranes; self-propelled derricks and cranes, not on tyres, n.e.c. in heading no. 8426"
+    },
+    {
+     "label": "842860",
+     "score": 0.6651,
+     "detail": "Teleferics, chair-lifts, ski-draglines, traction mechanisms for funiculars"
+    },
+    {
+     "label": "860699",
+     "score": 0.6347,
+     "detail": "Railway or tramway goods vans and wagons; n.e.c. in heading no. 8606, not self-propelled"
+    },
+    {
+     "label": "870451",
+     "score": 0.6346,
+     "detail": "Vehicles; with both spark-ignition internal combustion piston engine and electric motors for propulsion, of a g.v.w. not exceeding 5,000kg"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 14.3
+  },
+  {
+   "id": "hs-011",
+   "input": "Refrigerated shipping containers (reefers), 40 ft",
+   "expected": "8609",
+   "tags": [
+    "machinery"
+   ],
+   "predictions": [
+    {
+     "label": "890130",
+     "score": 0.6734,
+     "detail": "Vessels, refrigerated; other than tankers"
+    },
+    {
+     "label": "761210",
+     "score": 0.6472,
+     "detail": "Aluminium; collapsible tubular containers, for any material, (not compressed or liquefied gas), 300l capacity or less, whether or not lined, not fitted with mechanical/thermal equipment"
+    },
+    {
+     "label": "030236",
+     "score": 0.6316,
+     "detail": "Fish; fresh or chilled, southern bluefin tunas (Thunnus maccoyii), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99"
+    },
+    {
+     "label": "731021",
+     "score": 0.6307,
+     "detail": "Cans; which are to be closed by soldering or crimping, for any material (excluding compressed or liquefied gas), less than 50l capacity, of iron or steel"
+    },
+    {
+     "label": "160529",
+     "score": 0.629,
+     "detail": "Crustacean preparations; shrimps and prawns, prepared or preserved, in airtight containers"
+    }
+   ],
+   "rank": null,
+   "latencyMs": 13.3
+  },
+  {
+   "id": "hs-012",
+   "input": "Diesel generator set 100 kVA",
+   "expected": "8502",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "850213",
+     "score": 0.7316,
+     "detail": "Electric generating sets; with compression-ignition internal combustion piston engines (diesel or semi-diesel engines), of an output exceeding 375kVA"
+    },
+    {
+     "label": "850132",
+     "score": 0.6754,
+     "detail": "Electric motors and generators; DC, of an output exceeding 750W but not exceeding 75kW"
+    },
+    {
+     "label": "850434",
+     "score": 0.6487,
+     "detail": "Transformers; n.e.c. in item no. 8504.2, having a power handling capacity exceeding 500kVA"
+    },
+    {
+     "label": "841013",
+     "score": 0.6352,
+     "detail": "Turbines; hydraulic turbines and water wheels, of a power exceeding 10000kW"
+    },
+    {
+     "label": "850300",
+     "score": 0.634,
+     "detail": "Electric motors and generators; parts suitable for use solely or principally with the machines of heading no. 8501 or 8502"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 12.4
+  },
+  {
+   "id": "hs-013",
+   "input": "Lithium-ion battery packs for e-bikes, 48 V",
+   "expected": "8507",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "850650",
+     "score": 0.6561,
+     "detail": "Cells and batteries; primary, lithium"
+    },
+    {
+     "label": "854911",
+     "score": 0.6232,
+     "detail": "Waste and scrap of lead-acid accumulators; spent lead-acid accumulators"
+    },
+    {
+     "label": "871120",
+     "score": 0.6188,
+     "detail": "Motorcycles (including mopeds) and cycles; fitted with an auxiliary motor, internal combustion piston engine, of cylinder capacity exceeding 50cc but not exceeding 250cc, with or without side-cars; side-cars"
+    },
+    {
+     "label": "850431",
+     "score": 0.6142,
+     "detail": "Electrical transformers; n.e.c. in item no. 8504.2, having a power handling capacity not exceeding 1kVA"
+    },
+    {
+     "label": "271600",
+     "score": 0.6129,
+     "detail": "Electrical energy"
+    }
+   ],
+   "rank": null,
+   "latencyMs": 13.8
+  },
+  {
+   "id": "hs-014",
+   "input": "Smartphones, 6.5-inch, dual SIM",
+   "expected": "8517",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "851711",
+     "score": 0.5783,
+     "detail": "Line telephone sets with cordless handsets"
+    },
+    {
+     "label": "850650",
+     "score": 0.5455,
+     "detail": "Cells and batteries; primary, lithium"
+    },
+    {
+     "label": "100840",
+     "score": 0.513,
+     "detail": "Cereals; fonio (Digitaria spp.)"
+    },
+    {
+     "label": "901490",
+     "score": 0.512,
+     "detail": "Navigational instruments and appliances; parts and accessories"
+    },
+    {
+     "label": "850730",
+     "score": 0.5099,
+     "detail": "Electric accumulators; nickel-cadmium, including separators, whether or not rectangular (including square)"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 15
+  },
+  {
+   "id": "hs-015",
+   "input": "55-inch 4K colour LED televisions",
+   "expected": "8528",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "852412",
+     "score": 0.619,
+     "detail": "Flat panel display modules, whether or not incorporating touch-sensitive screens; of organic light-emitting diodes (OLED), without drivers or control circuits"
+    },
+    {
+     "label": "852849",
+     "score": 0.6041,
+     "detail": "Monitors; cathode-ray tube, n.e.c. in subheading 8528.42, whether or not colour"
+    },
+    {
+     "label": "961800",
+     "score": 0.5635,
+     "detail": "Tailors' dummies and other lay figures; automata and other animated displays used for shop window dressing"
+    },
+    {
+     "label": "854040",
+     "score": 0.5605,
+     "detail": "Tubes; data/graphic display tubes, monochrome; data/graphic display tubes, colour, with a phosphor dot screen pitch smaller than 0.4mm"
+    },
+    {
+     "label": "900653",
+     "score": 0.5599,
+     "detail": "Cameras, photographic (excluding cinematographic), for roll film of a width of 35mm"
+    }
+   ],
+   "rank": 2,
+   "latencyMs": 14.9
+  },
+  {
+   "id": "hs-016",
+   "input": "Monocrystalline PV panels 550 W, assembled modules",
+   "expected": "8541",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "854143",
+     "score": 0.6819,
+     "detail": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+    },
+    {
+     "label": "852412",
+     "score": 0.6375,
+     "detail": "Flat panel display modules, whether or not incorporating touch-sensitive screens; of organic light-emitting diodes (OLED), without drivers or control circuits"
+    },
+    {
+     "label": "550190",
+     "score": 0.6347,
+     "detail": "Fibres; synthetic filament tow, of synthetic materials n.e.c. in heading no. 5501"
+    },
+    {
+     "label": "441879",
+     "score": 0.6322,
+     "detail": "Wood; assembled flooring panels, n.e.c in headings 4418.73, 4418.74 or 4418.75"
+    },
+    {
+     "label": "281215",
+     "score": 0.6073,
+     "detail": "Sulphur monochloride"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 19.1
+  },
+  {
+   "id": "hs-017",
+   "input": "Electric motors, AC, three-phase, 7.5 kW",
+   "expected": "8501",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "850152",
+     "score": 0.8124,
+     "detail": "Electric motors; AC motors, multi-phase, of an output exceeding 750W but not exceeding 75kW"
+    },
+    {
+     "label": "850220",
+     "score": 0.6869,
+     "detail": "Electric generating sets; with spark-ignition internal combustion piston engines"
+    },
+    {
+     "label": "271600",
+     "score": 0.6847,
+     "detail": "Electrical energy"
+    },
+    {
+     "label": "870441",
+     "score": 0.6728,
+     "detail": "Vehicles; with both compression-ignition internal combustion piston engine (diesel/semi-diesel) and electric motor as motor for propulsion, unassembled as in section 14, (gvw not exceeding 5000kg), for the transport of goods, vans"
+    },
+    {
+     "label": "841221",
+     "score": 0.6722,
+     "detail": "Engines; hydraulic power engines and motors, linear acting (cylinders)"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 15.5
+  },
+  {
+   "id": "hs-018",
+   "input": "Insulated copper electrical cable, PVC sheathed, 4 mm2",
+   "expected": "8544",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "854411",
+     "score": 0.7113,
+     "detail": "Insulated electric conductors; winding wire, of copper"
+    },
+    {
+     "label": "741300",
+     "score": 0.7086,
+     "detail": "Copper; stranded wire, cables, plaited bands and the like, not electrically insulated"
+    },
+    {
+     "label": "731210",
+     "score": 0.6804,
+     "detail": "Iron or steel; stranded wire, ropes and cables, not electrically insulated"
+    },
+    {
+     "label": "761410",
+     "score": 0.6669,
+     "detail": "Aluminium; stranded wire, cables, plaited bands and the like, (not electrically insulated), with steel core"
+    },
+    {
+     "label": "740819",
+     "score": 0.6564,
+     "detail": "Copper; wire, of refined copper, of which the maximum cross-sectional dimension is 6mm or less"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 16.4
+  },
+  {
+   "id": "hs-019",
+   "input": "LED lamps, E27 screw base, 9 W",
+   "expected": "8539",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "940521",
+     "score": 0.6706,
+     "detail": "Luminaires and light fittings; electric, table, desk, bedside or floor-standing, for use solely with light-emitting diode (LED) light sources"
+    },
+    {
+     "label": "853990",
+     "score": 0.6587,
+     "detail": "Lamps; parts of the lamps of heading no. 8539"
+    },
+    {
+     "label": "900661",
+     "score": 0.6199,
+     "detail": "Photographic flashlight apparatus; discharge lamp (electronic)"
+    },
+    {
+     "label": "901390",
+     "score": 0.6174,
+     "detail": "Optical appliances and instruments; parts and accessories for articles of heading no. 9013"
+    },
+    {
+     "label": "911440",
+     "score": 0.6131,
+     "detail": "Clock or watch parts; plates and bridges"
+    }
+   ],
+   "rank": 2,
+   "latencyMs": 12.6
+  },
+  {
+   "id": "hs-020",
+   "input": "Hair dryers, handheld, 2000 W",
+   "expected": "8516",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "851631",
+     "score": 0.6712,
+     "detail": "Hair-dressing apparatus; electro-thermic hair dryers"
+    },
+    {
+     "label": "851020",
+     "score": 0.6417,
+     "detail": "Hair clippers; with a self-contained electric motor"
+    },
+    {
+     "label": "850819",
+     "score": 0.6148,
+     "detail": "Vacuum cleaners, with self-contained electric motor, n.e.c. in item no. 8508.1"
+    },
+    {
+     "label": "961519",
+     "score": 0.6137,
+     "detail": "Combs, hair slides and the like; of other than hard rubber or plastics"
+    },
+    {
+     "label": "630110",
+     "score": 0.6035,
+     "detail": "Blankets; electric"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 12.7
+  },
+  {
+   "id": "hs-021",
+   "input": "Printed circuit boards, bare, multilayer",
+   "expected": "8534",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "853400",
+     "score": 0.7057,
+     "detail": "Circuits; printed"
+    },
+    {
+     "label": "853224",
+     "score": 0.6651,
+     "detail": "Electrical capacitors; fixed, ceramic dielectric, multilayer"
+    },
+    {
+     "label": "852411",
+     "score": 0.6616,
+     "detail": "Flat panel display modules, whether or not incorporating touch-sensitive screens; of liquid crystals, without drivers or control circuits"
+    },
+    {
+     "label": "854290",
+     "score": 0.6575,
+     "detail": "Parts of electronic integrated circuits"
+    },
+    {
+     "label": "854931",
+     "score": 0.6424,
+     "detail": "Electrical and electronic waste and scrap; electrical and electronic assemblies and printed circuit boards, other than those used principally for the recovery of precious metal, containing primary cells and batteries, electric accumulators, mercury-switch"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 13.3
+  },
+  {
+   "id": "hs-022",
+   "input": "Wireless earbuds, Bluetooth",
+   "expected": "8518",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "854233",
+     "score": 0.5724,
+     "detail": "Electronic integrated circuits; amplifiers"
+    },
+    {
+     "label": "810196",
+     "score": 0.5696,
+     "detail": "Tungsten (wolfram); wire"
+    },
+    {
+     "label": "851830",
+     "score": 0.5653,
+     "detail": "Headphones and earphones, whether or not combined with a microphone, and sets consisting of a microphone and one or more loudspeakers"
+    },
+    {
+     "label": "293152",
+     "score": 0.565,
+     "detail": "Halogenated organo-phosphorous derivatives; propylphosphonic dichloride"
+    },
+    {
+     "label": "920810",
+     "score": 0.5646,
+     "detail": "Musical boxes"
+    }
+   ],
+   "rank": 3,
+   "latencyMs": 12.5
+  },
+  {
+   "id": "hs-023",
+   "input": "IP CCTV cameras for surveillance",
+   "expected": "8525",
+   "tags": [
+    "electrical"
+   ],
+   "predictions": [
+    {
+     "label": "900710",
+     "score": 0.639,
+     "detail": "Cameras, cinematographic; whether or not incorporating sound recording apparatus"
+    },
+    {
+     "label": "852589",
+     "score": 0.6359,
+     "detail": "Television cameras; n.e.c. in item no 8525.8"
+    },
+    {
+     "label": "900630",
+     "score": 0.6192,
+     "detail": "Cameras, photographic (excluding cinematographic); specially designed for underwater use, aerial survey, medical or surgical examination of internal organs; comparison cameras for forensic or criminological use"
+    },
+    {
+     "label": "901010",
+     "score": 0.5914,
+     "detail": "Photographic laboratory apparatus and equipment; for automatically developing photographic (including cinematographic) film or paper in rolls or for automatically exposing developed film to rolls of paper"
+    },
+    {
+     "label": "852190",
+     "score": 0.582,
+     "detail": "Video recording or reproducing apparatus; other than magnetic tape-type"
+    }
+   ],
+   "rank": 2,
+   "latencyMs": 12.1
+  },
+  {
+   "id": "hs-024",
+   "input": "Passenger cars, petrol engine 1.5 litre, 5 seats",
+   "expected": "8703",
+   "tags": [
+    "vehicles"
+   ],
+   "predictions": [
+    {
+     "label": "870452",
+     "score": 0.7104,
+     "detail": "Vehicles; with both spark-ignition internal combustion piston engine and electric motors for propulsion, of a g.v.w. exceeding 5,000kg"
+    },
+    {
+     "label": "870210",
+     "score": 0.7075,
+     "detail": "Vehicles; public transport type (carries 10 or more persons, including driver), with only compression-ignition internal combustion piston engine (diesel or semi-diesel), new or used"
+    },
+    {
+     "label": "870600",
+     "score": 0.6885,
+     "detail": "Chassis; fitted with engines, for the motor vehicles of heading no. 8701 to 8705"
+    },
+    {
+     "label": "870321",
+     "score": 0.6807,
+     "detail": "Vehicles; with only spark-ignition internal combustion piston engine, cylinder capacity not over 1000cc"
+    },
+    {
+     "label": "870821",
+     "score": 0.6669,
+     "detail": "Vehicles; parts of bodies, safety seat belts"
+    }
+   ],
+   "rank": 4,
+   "latencyMs": 14.3
+  },
+  {
+   "id": "hs-025",
+   "input": "Motorcycles, 150 cc petrol engine",
+   "expected": "8711",
+   "tags": [
+    "vehicles"
+   ],
+   "predictions": [
+    {
+     "label": "871120",
+     "score": 0.7302,
+     "detail": "Motorcycles (including mopeds) and cycles; fitted with an auxiliary motor, internal combustion piston engine, of cylinder capacity exceeding 50cc but not exceeding 250cc, with or without side-cars; side-cars"
+    },
+    {
+     "label": "871410",
+     "score": 0.6723,
+     "detail": "Motorcycles (including mopeds); parts and accessories"
+    },
+    {
+     "label": "870441",
+     "score": 0.6624,
+     "detail": "Vehicles; with both compression-ignition internal combustion piston engine (diesel/semi-diesel) and electric motor as motor for propulsion, unassembled as in section 14, (gvw not exceeding 5000kg), for the transport of goods, vans"
+    },
+    {
+     "label": "870332",
+     "score": 0.6595,
+     "detail": "Vehicles; with only compression-ignition internal combustion piston engine (diesel or semi-diesel), cylinder capacity over 1500 but not over 2500cc"
+    },
+    {
+     "label": "840999",
+     "score": 0.652,
+     "detail": "Engines; parts for internal combustion piston engines (excluding spark-ignition)"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 12.9
+  },
+  {
+   "id": "hs-026",
+   "input": "Pneumatic radial tyres for passenger cars, new, rubber",
+   "expected": "4011",
+   "tags": [
+    "vehicles"
+   ],
+   "predictions": [
+    {
+     "label": "401130",
+     "score": 0.8701,
+     "detail": "Rubber; new pneumatic tyres, of a kind used on aircraft"
+    },
+    {
+     "label": "401219",
+     "score": 0.7809,
+     "detail": "Retreaded tyres; other than of a kind used on motor cars (including station wagons and racing cars), buses and lorries and aircraft"
+    },
+    {
+     "label": "400700",
+     "score": 0.6974,
+     "detail": "Rubber; vulcanised, thread and cord"
+    },
+    {
+     "label": "401310",
+     "score": 0.6907,
+     "detail": "Rubber; inner tubes, of a kind used on motorcars (including station wagons and racing cars), buses and lorries"
+    },
+    {
+     "label": "401695",
+     "score": 0.6802,
+     "detail": "Rubber; vulcanised (other than hard rubber), inflatable articles (other than boat or dock fenders), of non-cellular rubber"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 14
+  },
+  {
+   "id": "hs-027",
+   "input": "Brake pads for cars",
+   "expected": "8708",
+   "tags": [
+    "vehicles"
+   ],
+   "predictions": [
+    {
+     "label": "681381",
+     "score": 0.665,
+     "detail": "Brake linings and pads; with a basis of mineral substances or cellulose (other than asbestos)"
+    },
+    {
+     "label": "381900",
+     "score": 0.6324,
+     "detail": "Hydraulic fluids; for brakes and other prepared liquids for hydraulic transmission, not containing or containing less than 70% by weight of petroleum oils or oils obtained from bituminous minerals"
+    },
+    {
+     "label": "401140",
+     "score": 0.6237,
+     "detail": "Rubber; new pneumatic tyres, of a kind used on motorcycles"
+    },
+    {
+     "label": "401211",
+     "score": 0.6157,
+     "detail": "Retreaded tyres; of a kind used on motor cars (including station wagons and racing cars)"
+    },
+    {
+     "label": "400700",
+     "score": 0.6156,
+     "detail": "Rubber; vulcanised, thread and cord"
+    }
+   ],
+   "rank": null,
+   "latencyMs": 12.2
+  },
+  {
+   "id": "hs-028",
+   "input": "Bicycles, non-motorised, 26-inch wheels",
+   "expected": "8712",
+   "tags": [
+    "vehicles"
+   ],
+   "predictions": [
+    {
+     "label": "871200",
+     "score": 0.7451,
+     "detail": "Bicycles and other cycles; including delivery tricycles, not motorised"
+    },
+    {
+     "label": "860692",
+     "score": 0.6982,
+     "detail": "Railway or tramway goods vans and wagons; open, with non-removable sides of a height exceeding 60cm, not self-propelled"
+    },
+    {
+     "label": "401150",
+     "score": 0.6802,
+     "detail": "Rubber; new pneumatic tyres, of a kind used on bicycles"
+    },
+    {
+     "label": "401694",
+     "score": 0.6743,
+     "detail": "Rubber; vulcanised (other than hard rubber), boat or dock fenders, whether or not inflatable, of non-cellular rubber"
+    },
+    {
+     "label": "401320",
+     "score": 0.6707,
+     "detail": "Rubber; inner tubes, of a kind used on bicycles"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 15
+  },
+  {
+   "id": "hs-029",
+   "input": "Cotton crew-neck T-shirts, knitted",
+   "expected": "6109",
+   "tags": [
+    "textiles"
+   ],
+   "predictions": [
+    {
+     "label": "610910",
+     "score": 0.755,
+     "detail": "T-shirts, singlets and other vests; of cotton, knitted or crocheted"
+    },
+    {
+     "label": "610510",
+     "score": 0.726,
+     "detail": "Shirts; men's or boys', of cotton, knitted or crocheted"
+    },
+    {
+     "label": "611090",
+     "score": 0.7031,
+     "detail": "Jerseys, pullovers, cardigans, waistcoats and similar articles; of textile materials (other than wool or fine animal hair, cotton or man-made fibres), knitted or crocheted"
+    },
+    {
+     "label": "620520",
+     "score": 0.6947,
+     "detail": "Shirts; men's or boys', of cotton (not knitted or crocheted)"
+    },
+    {
+     "label": "611300",
+     "score": 0.6877,
+     "detail": "Garments made up of knitted or crocheted fabrics of heading no. 5903, 5906 and 5907"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 12.9
+  },
+  {
+   "id": "hs-030",
+   "input": "Men's denim jeans, woven cotton",
+   "expected": "6203",
+   "tags": [
+    "textiles"
+   ],
+   "predictions": [
+    {
+     "label": "521142",
+     "score": 0.7558,
+     "detail": "Fabrics, woven; containing less than 85% by weight of cotton, mixed mainly or solely with man-made fibres, weighing more than 200g/m2, of yarns of different colours, denim"
+    },
+    {
+     "label": "521032",
+     "score": 0.7329,
+     "detail": "Fabrics, woven; containing less than 85% by weight of cotton, mixed mainly or solely with man-made fibres, weighing 200g/m2 or less, dyed, 3-thread or 4-thread twill, including cross twill"
+    },
+    {
+     "label": "520942",
+     "score": 0.7294,
+     "detail": "Fabrics, woven; containing 85% or more by weight of cotton, of yarns of different colours, weighing more than 200g/m2, denim"
+    },
+    {
+     "label": "520823",
+     "score": 0.7097,
+     "detail": "Fabrics, woven; containing 85% or more by weight of cotton, bleached, 3-thread or 4-thread twill, including cross twill, weighing not more than 200g/m2"
+    },
+    {
+     "label": "521224",
+     "score": 0.7068,
+     "detail": "Fabrics, woven; of cotton, of yarns of different colours, weighing more than 200g/m2, n.e.c. in chapter 52"
+    }
+   ],
+   "rank": null,
+   "latencyMs": 13.3
+  },
+  {
+   "id": "hs-031",
+   "input": "Women's knitted pullovers, wool",
+   "expected": "6110",
+   "tags": [
+    "textiles"
+   ],
+   "predictions": [
+    {
+     "label": "611011",
+     "score": 0.7661,
+     "detail": "Jerseys, pullovers, cardigans, waistcoats and similar articles; knitted or crocheted, of wool or fine animal hair"
+    },
+    {
+     "label": "510130",
+     "score": 0.7086,
+     "detail": "Wool; (not carded or combed), carbonised"
+    },
+    {
+     "label": "610441",
+     "score": 0.69,
+     "detail": "Dresses; women's or girls', of wool or fine animal hair, knitted or crocheted"
+    },
+    {
+     "label": "620620",
+     "score": 0.6887,
+     "detail": "Blouses, shirts and shirt-blouses; women's or girls', of wool or fine animal hair (not knitted or crocheted)"
+    },
+    {
+     "label": "630411",
+     "score": 0.6822,
+     "detail": "Bedspreads; knitted or crocheted"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 12.6
+  },
+  {
+   "id": "hs-032",
+   "input": "Bath towels, cotton terry fabric",
+   "expected": "6302",
+   "tags": [
+    "textiles"
+   ],
+   "predictions": [
+    {
+     "label": "630260",
+     "score": 0.7719,
+     "detail": "Kitchen and toilet linen; of terry towelling or similar terry fabrics, of cotton"
+    },
+    {
+     "label": "580210",
+     "score": 0.7431,
+     "detail": "Fabrics; terry towelling and similar woven terry fabrics, of cotton, whether bleached or unbleached, excluding narrow fabrics of heading no. 5806"
+    },
+    {
+     "label": "610791",
+     "score": 0.7152,
+     "detail": "Bathrobes, dressing gowns and similar articles; men's or boys', of cotton, knitted or crocheted"
+    },
+    {
+     "label": "520100",
+     "score": 0.7041,
+     "detail": "Cotton; not carded or combed"
+    },
+    {
+     "label": "610829",
+     "score": 0.6972,
+     "detail": "Briefs and panties; women's or girls', of textile materials (other than cotton or man-made fibres), knitted or crocheted"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 12.9
+  },
+  {
+   "id": "hs-033",
+   "input": "Running shoes with rubber soles and textile uppers",
+   "expected": "6404",
+   "tags": [
+    "textiles"
+   ],
+   "predictions": [
+    {
+     "label": "640411",
+     "score": 0.725,
+     "detail": "Sports footwear; tennis shoes, basketball shoes, gym shoes, training shoes and the like, with outer soles of rubber or plastics and uppers of textile materials"
+    },
+    {
+     "label": "640220",
+     "score": 0.6975,
+     "detail": "Footwear; with outer soles and uppers of rubber or plastics, upper straps or thongs assembled to the sole by plugs"
+    },
+    {
+     "label": "640340",
+     "score": 0.6885,
+     "detail": "Footwear; with metal toe-cap, outer soles of rubber, plastics, leather or composition leather, uppers of leather"
+    },
+    {
+     "label": "640110",
+     "score": 0.6594,
+     "detail": "Footwear; waterproof with metal toe-cap, rubber or plastic outer soles and uppers (not assembled by stitch, rivet, nail, screw, plug or similar)"
+    },
+    {
+     "label": "640520",
+     "score": 0.656,
+     "detail": "Footwear; with uppers of textile materials, n.e.c. in chapter 64"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 12.8
+  },
+  {
+   "id": "hs-034",
+   "input": "Leather handbags",
+   "expected": "4202",
+   "tags": [
+    "textiles"
+   ],
+   "predictions": [
+    {
+     "label": "420221",
+     "score": 0.7386,
+     "detail": "Cases and containers; handbags (whether or not with shoulder strap and including those without handle), with outer surface of leather or of composition leather"
+    },
+    {
+     "label": "420329",
+     "score": 0.7084,
+     "detail": "Clothing accessories; gloves, mittens and mitts, n.e.c. in heading no. 4203, of leather or composition leather, not specially designed for use in sports"
+    },
+    {
+     "label": "411420",
+     "score": 0.6846,
+     "detail": "Leather; patent leather and laminated patent leather; metallised leather"
+    },
+    {
+     "label": "420500",
+     "score": 0.6497,
+     "detail": "Leather articles; n.e.c. in chapter 42, of leather or composition leather"
+    },
+    {
+     "label": "830810",
+     "score": 0.627,
+     "detail": "Hooks, eyes and eyelets; of base metal, of a kind used for clothing, footwear, awnings, handbags, travel goods or other made up articles"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 12.2
+  },
+  {
+   "id": "hs-035",
+   "input": "Polyester filament yarn, textured, not for retail sale",
+   "expected": "5402",
+   "tags": [
+    "textiles"
+   ],
+   "predictions": [
+    {
+     "label": "540233",
+     "score": 0.8383,
+     "detail": "Yarn, synthetic; filament, monofilament (less than 67 decitex), textured, of polyesters, not for retail sale, not sewing thread"
+    },
+    {
+     "label": "550953",
+     "score": 0.7867,
+     "detail": "Yarn; (not sewing thread), of polyester staple fibres, mixed mainly or solely with cotton, not put up for retail sale"
+    },
+    {
+     "label": "540310",
+     "score": 0.7776,
+     "detail": "Yarn, artificial; filament, monofilament (less than 67 decitex), of high tenacity viscose rayon, not for retail sale, not sewing thread"
+    },
+    {
+     "label": "540600",
+     "score": 0.7775,
+     "detail": "Man-made filament yarn (other than sewing thread), put up for retail sale"
+    },
+    {
+     "label": "551130",
+     "score": 0.7595,
+     "detail": "Yarn; (not sewing thread), of artificial staple fibres, put up for retail sale"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 12.9
+  },
+  {
+   "id": "hs-036",
+   "input": "Basmati rice, wholly milled, 25 kg bags",
+   "expected": "1006",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "100630",
+     "score": 0.6747,
+     "detail": "Cereals; rice, semi-milled or wholly milled, whether or not polished or glazed"
+    },
+    {
+     "label": "090832",
+     "score": 0.6175,
+     "detail": "Spices; cardamoms, crushed or ground"
+    },
+    {
+     "label": "110412",
+     "score": 0.6101,
+     "detail": "Cereal grains; rolled or flaked, of oats"
+    },
+    {
+     "label": "071334",
+     "score": 0.5856,
+     "detail": "Vegetables, leguminous; bambara beans (Vigna subterranea or Voandzeia subterranea), shelled, whether or not skinned or split, dried"
+    },
+    {
+     "label": "530310",
+     "score": 0.572,
+     "detail": "Jute and other textile bast fibres; raw or retted, but not spun, (excluding flax, hemp (cannabis sativa L.), and ramie)"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 14.9
+  },
+  {
+   "id": "hs-037",
+   "input": "Roasted coffee beans, not decaffeinated",
+   "expected": "0901",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "090121",
+     "score": 0.7417,
+     "detail": "Coffee; roasted, not decaffeinated"
+    },
+    {
+     "label": "180100",
+     "score": 0.6883,
+     "detail": "Cocoa beans; whole or broken, raw or roasted"
+    },
+    {
+     "label": "110710",
+     "score": 0.6687,
+     "detail": "Malt; not roasted"
+    },
+    {
+     "label": "151321",
+     "score": 0.6405,
+     "detail": "Vegetable oils; palm kernel or babassu oil and their fractions, crude, not chemically modified"
+    },
+    {
+     "label": "071332",
+     "score": 0.6331,
+     "detail": "Vegetables, leguminous; small red (adzuki) beans (phaseolus or vigna angularis), shelled, whether or not skinned or split, dried"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 14.1
+  },
+  {
+   "id": "hs-038",
+   "input": "Black tea in packets of 500 g",
+   "expected": "0902",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "090220",
+     "score": 0.6874,
+     "detail": "Tea, green; (not fermented), in immediate packings of a content exceeding 3kg"
+    },
+    {
+     "label": "091099",
+     "score": 0.5813,
+     "detail": "Spices; n.e.c. in heading no. 0910"
+    },
+    {
+     "label": "283327",
+     "score": 0.5659,
+     "detail": "Sulphates; of barium"
+    },
+    {
+     "label": "110820",
+     "score": 0.5654,
+     "detail": "Inulin"
+    },
+    {
+     "label": "284020",
+     "score": 0.5624,
+     "detail": "Borates; n.e.c. in heading no. 2840"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 17.9
+  },
+  {
+   "id": "hs-039",
+   "input": "Frozen shrimp, peeled",
+   "expected": "0306",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "030329",
+     "score": 0.6835,
+     "detail": "Fish; frozen, Nile perch (Lates niloticus) and snakeheads (Channa spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99"
+    },
+    {
+     "label": "030492",
+     "score": 0.668,
+     "detail": "Fish meat, excluding fillets, whether or not minced; frozen, toothfish (Dissostichus spp.)"
+    },
+    {
+     "label": "030617",
+     "score": 0.661,
+     "detail": "Crustaceans; frozen, shrimps and prawns, excluding cold-water varieties, in shell or not, smoked, cooked or not before or during smoking; in shell, cooked by steaming or by boiling in water"
+    },
+    {
+     "label": "081400",
+     "score": 0.6539,
+     "detail": "Peel; of citrus fruit or melons (including watermelons), fresh, frozen, dried or provisionally preserved in brine, in sulphur water and other preservative solutions"
+    },
+    {
+     "label": "071022",
+     "score": 0.6489,
+     "detail": "Vegetables, leguminous; beans (vigna spp., phaseolus spp.), shelled or unshelled, uncooked or cooked by steaming or boiling in water, frozen"
+    }
+   ],
+   "rank": 3,
+   "latencyMs": 17.9
+  },
+  {
+   "id": "hs-040",
+   "input": "Fresh bananas, Cavendish",
+   "expected": "0803",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "081040",
+     "score": 0.6849,
+     "detail": "Fruit, edible; cranberries, bilberries and other fruits of the genus vaccinium, fresh"
+    },
+    {
+     "label": "080310",
+     "score": 0.674,
+     "detail": "Fruit, edible; plantains, fresh or dried"
+    },
+    {
+     "label": "070930",
+     "score": 0.6504,
+     "detail": "Vegetables; aubergines, (e.g. plants), fresh or chilled"
+    },
+    {
+     "label": "080810",
+     "score": 0.6326,
+     "detail": "Fruit, edible; apples, fresh"
+    },
+    {
+     "label": "080711",
+     "score": 0.6282,
+     "detail": "Fruit, edible; watermelons, fresh"
+    }
+   ],
+   "rank": 2,
+   "latencyMs": 15.9
+  },
+  {
+   "id": "hs-041",
+   "input": "Refined white cane sugar",
+   "expected": "1701",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "170199",
+     "score": 0.6885,
+     "detail": "Sugars; sucrose, chemically pure, in solid form, not containing added flavouring or colouring matter"
+    },
+    {
+     "label": "170490",
+     "score": 0.6742,
+     "detail": "Sugar confectionery; (excluding chewing gum, including white chocolate), not containing cocoa"
+    },
+    {
+     "label": "170310",
+     "score": 0.6647,
+     "detail": "Sugars; molasses, from sugar cane, resulting from the extraction or refining of sugar"
+    },
+    {
+     "label": "170220",
+     "score": 0.6462,
+     "detail": "Sugars; maple sugar, chemically pure, in solid form; maple syrup, not containing added flavouring or colouring matter"
+    },
+    {
+     "label": "200981",
+     "score": 0.6251,
+     "detail": "Juice; cranberry (Vaccinium macrocarpon, Vaccinium oxycoccos); Iingonberry (Vaccinium vitis-idaea), unfermented, not containing added spirit, whether or not containing added sugar or other sweetening matter"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 15.4
+  },
+  {
+   "id": "hs-042",
+   "input": "Crude palm oil",
+   "expected": "1511",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "151321",
+     "score": 0.7618,
+     "detail": "Vegetable oils; palm kernel or babassu oil and their fractions, crude, not chemically modified"
+    },
+    {
+     "label": "151110",
+     "score": 0.7571,
+     "detail": "Vegetable oils; palm oil and its fractions, crude, not chemically modified"
+    },
+    {
+     "label": "120710",
+     "score": 0.7021,
+     "detail": "Oil seeds; palm nuts and kernels, whether or not broken"
+    },
+    {
+     "label": "230650",
+     "score": 0.6926,
+     "detail": "Oil-cake and other solid residues; whether or not ground or in the form of pellets, resulting from the extraction of coconut or copra seed oils"
+    },
+    {
+     "label": "150710",
+     "score": 0.6893,
+     "detail": "Vegetable oils; soya-bean oil and its fractions, crude, whether or not degummed, not chemically modified"
+    }
+   ],
+   "rank": 2,
+   "latencyMs": 12.8
+  },
+  {
+   "id": "hs-043",
+   "input": "Frozen boneless beef cuts",
+   "expected": "0202",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "020230",
+     "score": 0.7987,
+     "detail": "Meat; of bovine animals, boneless cuts, frozen"
+    },
+    {
+     "label": "020443",
+     "score": 0.7229,
+     "detail": "Meat; of sheep (including lamb), boneless cuts, frozen"
+    },
+    {
+     "label": "020130",
+     "score": 0.6943,
+     "detail": "Meat; of bovine animals, boneless cuts, fresh or chilled"
+    },
+    {
+     "label": "030331",
+     "score": 0.6821,
+     "detail": "Fish; frozen, halibut (Reinhardtius hippoglossoides, Hippoglossus hippoglossus, Hippoglossus stenolepis), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99"
+    },
+    {
+     "label": "020322",
+     "score": 0.6475,
+     "detail": "Meat; of swine, hams, shoulders and cuts thereof, with bone in, frozen"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 14
+  },
+  {
+   "id": "hs-044",
+   "input": "Wheat flour",
+   "expected": "1101",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "110100",
+     "score": 0.8312,
+     "detail": "Wheat or meslin flour"
+    },
+    {
+     "label": "110220",
+     "score": 0.7922,
+     "detail": "Cereal flour; of maize (corn)"
+    },
+    {
+     "label": "110900",
+     "score": 0.7628,
+     "detail": "Wheat gluten; whether or not dried"
+    },
+    {
+     "label": "110811",
+     "score": 0.7327,
+     "detail": "Starch; wheat"
+    },
+    {
+     "label": "100111",
+     "score": 0.7002,
+     "detail": "Cereals; wheat and meslin, durum wheat, seed"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 17.8
+  },
+  {
+   "id": "hs-045",
+   "input": "Cashew nuts, shelled",
+   "expected": "0801",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "080132",
+     "score": 0.7852,
+     "detail": "Nuts, edible; cashew nuts, fresh or dried, shelled"
+    },
+    {
+     "label": "080232",
+     "score": 0.7734,
+     "detail": "Nuts, edible; walnuts, fresh or dried, shelled"
+    },
+    {
+     "label": "071360",
+     "score": 0.7333,
+     "detail": "Vegetables, leguminous; pigeon peas (Cajanus cajan), shelled, whether or not skinned or split, dried"
+    },
+    {
+     "label": "120230",
+     "score": 0.7211,
+     "detail": "Ground-nuts; seed, not roasted or otherwise cooked, whether or not shelled or broken"
+    },
+    {
+     "label": "070810",
+     "score": 0.6995,
+     "detail": "Vegetables, leguminous; peas (pisum sativum), shelled or unshelled, fresh or chilled"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 18.9
+  },
+  {
+   "id": "hs-046",
+   "input": "Fresh apples",
+   "expected": "0808",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "080810",
+     "score": 0.7981,
+     "detail": "Fruit, edible; apples, fresh"
+    },
+    {
+     "label": "081070",
+     "score": 0.7633,
+     "detail": "Fruit, edible; persimmons, fresh"
+    },
+    {
+     "label": "080610",
+     "score": 0.7157,
+     "detail": "Fruit, edible; grapes, fresh"
+    },
+    {
+     "label": "080510",
+     "score": 0.7016,
+     "detail": "Fruit, edible; oranges, fresh or dried"
+    },
+    {
+     "label": "070940",
+     "score": 0.69,
+     "detail": "Vegetables; celery (other than celeriac), fresh or chilled"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 17.1
+  },
+  {
+   "id": "hs-047",
+   "input": "Sparkling wine",
+   "expected": "2204",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "220410",
+     "score": 0.7226,
+     "detail": "Wine; sparkling"
+    },
+    {
+     "label": "230700",
+     "score": 0.6086,
+     "detail": "Wine lees; argol"
+    },
+    {
+     "label": "290543",
+     "score": 0.5867,
+     "detail": "Alcohols; polyhydric, mannitol"
+    },
+    {
+     "label": "220510",
+     "score": 0.5861,
+     "detail": "Vermouth and other wine of fresh grapes, flavoured with plants or aromatic substances, in containers holding 2 litres or less"
+    },
+    {
+     "label": "220291",
+     "score": 0.5828,
+     "detail": "Non-alcoholic beverages; non-alcoholic beer"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 19.1
+  },
+  {
+   "id": "hs-048",
+   "input": "Dark chocolate bars",
+   "expected": "1806",
+   "tags": [
+    "food"
+   ],
+   "predictions": [
+    {
+     "label": "180632",
+     "score": 0.6524,
+     "detail": "Chocolate and other food preparations containing cocoa; in blocks, slabs or bars, (not filled), weighing 2kg or less"
+    },
+    {
+     "label": "170490",
+     "score": 0.6205,
+     "detail": "Sugar confectionery; (excluding chewing gum, including white chocolate), not containing cocoa"
+    },
+    {
+     "label": "210500",
+     "score": 0.6101,
+     "detail": "Ice cream and other edible ice; whether or not containing cocoa"
+    },
+    {
+     "label": "180400",
+     "score": 0.6085,
+     "detail": "Cocoa; butter, fat and oil"
+    },
+    {
+     "label": "180500",
+     "score": 0.5962,
+     "detail": "Cocoa; powder, not containing added sugar or other sweetening matter"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 19
+  },
+  {
+   "id": "hs-049",
+   "input": "Polyethylene granules, LDPE, specific gravity below 0.94",
+   "expected": "3901",
+   "tags": [
+    "chemicals"
+   ],
+   "predictions": [
+    {
+     "label": "390120",
+     "score": 0.7657,
+     "detail": "Ethylene polymers; in primary forms, polyethylene having a specific gravity of 0.94 or more"
+    },
+    {
+     "label": "391510",
+     "score": 0.6697,
+     "detail": "Ethylene polymers; waste, parings and scrap"
+    },
+    {
+     "label": "391400",
+     "score": 0.6384,
+     "detail": "Ion-exchangers; based on polymers of heading no. 3901 to 3913, in primary forms"
+    },
+    {
+     "label": "270210",
+     "score": 0.6377,
+     "detail": "Lignite; whether or not pulverised, but not agglomerated, excluding jet"
+    },
+    {
+     "label": "390769",
+     "score": 0.627,
+     "detail": "Poly(ethylene terephthalate); in primary forms, having a viscosity of less than 78ml/g"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 21.4
+  },
+  {
+   "id": "hs-050",
+   "input": "Paracetamol tablets packaged for retail sale",
+   "expected": "3004",
+   "tags": [
+    "chemicals"
+   ],
+   "predictions": [
+    {
+     "label": "380899",
+     "score": 0.673,
+     "detail": "Rodenticides and other similar products n.e.c. in heading no. 3808.9; other than containing goods specified in Subheading Note 1 in this Chapter, put up in forms or packings for retail sale or as preparations or articles"
+    },
+    {
+     "label": "300610",
+     "score": 0.6684,
+     "detail": "Pharmaceutical goods; sterile surgical catgut, suture materials, tissue adhesives, laminaria, laminaria tents, absorbable surgical or dental haemostatics, and surgical or dental adhesion barriers"
+    },
+    {
+     "label": "300442",
+     "score": 0.6387,
+     "detail": "Medicaments; containing alkaloids or their derivatives, containing pseudoephedrine (INN) or its salts, for therapeutic or prophylactic uses, packaged for retail sale"
+    },
+    {
+     "label": "300310",
+     "score": 0.6091,
+     "detail": "Medicaments; containing penicillins, streptomycins or their derivatives, for therapeutic or prophylactic uses, (not in measured doses, not packaged for retail sale)"
+    },
+    {
+     "label": "293590",
+     "score": 0.607,
+     "detail": "Sulphonamides; n.e.c. in heading no. 2935"
+    }
+   ],
+   "rank": 3,
+   "latencyMs": 14.4
+  },
+  {
+   "id": "hs-051",
+   "input": "Urea fertiliser, granular",
+   "expected": "3102",
+   "tags": [
+    "chemicals"
+   ],
+   "predictions": [
+    {
+     "label": "310280",
+     "score": 0.6866,
+     "detail": "Fertilizers, mineral or chemical; nitrogenous, mixtures of urea and ammonium nitrate in aqueous or ammoniacal solution"
+    },
+    {
+     "label": "310430",
+     "score": 0.6728,
+     "detail": "Fertilizers, mineral or chemical; potassic, potassium sulphate"
+    },
+    {
+     "label": "843242",
+     "score": 0.6627,
+     "detail": "Spreaders and distributors; for manure and fertilizers, for agricultural, horticultural or forestry use; fertiliser distributors"
+    },
+    {
+     "label": "720521",
+     "score": 0.6511,
+     "detail": "Alloy steel powders"
+    },
+    {
+     "label": "310520",
+     "score": 0.6487,
+     "detail": "Fertilizers, mineral or chemical; containing the three fertilizing elements nitrogen, phosphorus and potassium"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 19.2
+  },
+  {
+   "id": "hs-052",
+   "input": "Shampoo, 400 ml bottles",
+   "expected": "3305",
+   "tags": [
+    "chemicals"
+   ],
+   "predictions": [
+    {
+     "label": "330510",
+     "score": 0.6407,
+     "detail": "Hair preparations; shampoos"
+    },
+    {
+     "label": "330300",
+     "score": 0.6221,
+     "detail": "Perfumes and toilet waters"
+    },
+    {
+     "label": "845129",
+     "score": 0.6137,
+     "detail": "Drying machines; of a dry linen capacity exceeding 10kg"
+    },
+    {
+     "label": "845020",
+     "score": 0.5964,
+     "detail": "Washing machines; household or laundry-type, of a dry linen capacity exceeding 10kg"
+    },
+    {
+     "label": "840681",
+     "score": 0.5742,
+     "detail": "Turbines; steam and other vapour turbines, (for other than marine propulsion), of an output exceeding 40MW"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 20.3
+  },
+  {
+   "id": "hs-053",
+   "input": "Portland cement, grey",
+   "expected": "2523",
+   "tags": [
+    "chemicals"
+   ],
+   "predictions": [
+    {
+     "label": "252321",
+     "score": 0.7443,
+     "detail": "Cement; portland, white, whether or not artificially coloured"
+    },
+    {
+     "label": "681181",
+     "score": 0.7015,
+     "detail": "Cellulose fibre-cement; articles or the like; corrugated sheets, not containing asbestos"
+    },
+    {
+     "label": "681091",
+     "score": 0.6198,
+     "detail": "Cement, concrete or artificial stone; prefabricated structural components for building or civil engineering, whether or not reinforced"
+    },
+    {
+     "label": "250510",
+     "score": 0.6134,
+     "detail": "Sands; natural, silica and quartz sands, whether or not coloured"
+    },
+    {
+     "label": "251749",
+     "score": 0.6115,
+     "detail": "Stones; of heading no. 2515 or 2516 (excluding marble), in granules, chippings and powder, whether or not heat-treated"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 18.5
+  },
+  {
+   "id": "hs-054",
+   "input": "Plastic water bottles, PET, empty",
+   "expected": "3923",
+   "tags": [
+    "chemicals"
+   ],
+   "predictions": [
+    {
+     "label": "391530",
+     "score": 0.6883,
+     "detail": "Vinyl chloride polymers; waste, parings and scrap"
+    },
+    {
+     "label": "392330",
+     "score": 0.664,
+     "detail": "Plastics; carboys, bottles, flasks and similar articles, for the conveyance or packing of goods"
+    },
+    {
+     "label": "392490",
+     "score": 0.6573,
+     "detail": "Plastics; household articles and hygienic or toilet articles"
+    },
+    {
+     "label": "392210",
+     "score": 0.6328,
+     "detail": "Plastics; baths, shower-baths, sinks and wash-basins"
+    },
+    {
+     "label": "391732",
+     "score": 0.6299,
+     "detail": "Plastics; tubes, pipes and hoses thereof, other than those of item no. 3917.31, not reinforced or otherwise combined with other materials, without fittings"
+    }
+   ],
+   "rank": 2,
+   "latencyMs": 20.6
+  },
+  {
+   "id": "hs-055",
+   "input": "Hydraulic pump valve seals, nitrile rubber",
+   "expected": "4016",
+   "tags": [
+    "chemicals"
+   ],
+   "predictions": [
+    {
+     "label": "401130",
+     "score": 0.7012,
+     "detail": "Rubber; new pneumatic tyres, of a kind used on aircraft"
+    },
+    {
+     "label": "401693",
+     "score": 0.6908,
+     "detail": "Rubber; vulcanised (other than hard rubber), gaskets, washers and other seals, of non-cellular rubber"
+    },
+    {
+     "label": "401390",
+     "score": 0.6744,
+     "detail": "Rubber; inner tubes, n.e.c. in heading no. 4013"
+    },
+    {
+     "label": "640199",
+     "score": 0.664,
+     "detail": "Footwear; waterproof, n.e.c. in heading no. 6401, rubber or plastic outer soles and uppers (not assembled by stitch, rivet, nail, screw, plug or similar)"
+    },
+    {
+     "label": "400921",
+     "score": 0.6586,
+     "detail": "Rubber; vulcanised (other than hard rubber), tubing, piping and hoses, reinforced or otherwise combined only with metal, without fittings"
+    }
+   ],
+   "rank": 2,
+   "latencyMs": 19
+  },
+  {
+   "id": "hs-056",
+   "input": "Liquefied petroleum gas, propane",
+   "expected": "2711",
+   "tags": [
+    "chemicals"
+   ],
+   "predictions": [
+    {
+     "label": "271112",
+     "score": 0.8404,
+     "detail": "Petroleum gases and other gaseous hydrocarbons; liquefied, propane"
+    },
+    {
+     "label": "761300",
+     "score": 0.7112,
+     "detail": "Aluminium; containers for compressed or liquefied gas"
+    },
+    {
+     "label": "731100",
+     "score": 0.6993,
+     "detail": "Containers for compressed or liquefied gas, of iron or steel"
+    },
+    {
+     "label": "271320",
+     "score": 0.6954,
+     "detail": "Petroleum bitumen; obtained from bituminous minerals"
+    },
+    {
+     "label": "290122",
+     "score": 0.6927,
+     "detail": "Acyclic hydrocarbons; unsaturated, propene (propylene)"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 19.8
+  },
+  {
+   "id": "hs-057",
+   "input": "Toothpaste",
+   "expected": "3306",
+   "tags": [
+    "chemicals"
+   ],
+   "predictions": [
+    {
+     "label": "300640",
+     "score": 0.6815,
+     "detail": "Pharmaceutical goods; dental cements and other dental fillings, bone reconstruction cements"
+    },
+    {
+     "label": "330610",
+     "score": 0.6788,
+     "detail": "Oral or dental hygiene preparations; dentifrices"
+    },
+    {
+     "label": "400130",
+     "score": 0.6382,
+     "detail": "Balata, gutta-percha, guayule, chicle and similar natural gums; in primary forms or in plates, sheets or strip"
+    },
+    {
+     "label": "252921",
+     "score": 0.6346,
+     "detail": "Fluorspar; containing by weight 97% or less of calcium fluoride"
+    },
+    {
+     "label": "340700",
+     "score": 0.6317,
+     "detail": "Modelling pastes; preparations known as dental wax, put up in sets, in packings for retail sale or in plates, horseshoe shapes, sticks or similar forms, other preparations for use in dentistry"
+    }
+   ],
+   "rank": 2,
+   "latencyMs": 19.3
+  },
+  {
+   "id": "hs-058",
+   "input": "Steel wire nails",
+   "expected": "7317",
+   "tags": [
+    "metals"
+   ],
+   "predictions": [
+    {
+     "label": "722300",
+     "score": 0.725,
+     "detail": "Steel, stainless; wire"
+    },
+    {
+     "label": "721720",
+     "score": 0.7221,
+     "detail": "Iron or non-alloy steel; wire, plated or coated with zinc"
+    },
+    {
+     "label": "722920",
+     "score": 0.7177,
+     "detail": "Steel, alloy; wire, of silico-manganese steel"
+    },
+    {
+     "label": "731431",
+     "score": 0.6875,
+     "detail": "Iron or steel wire; grill, netting and fencing, welded at the intersection, n.e.c. in item no. 7314.20, plated or coated with zinc"
+    },
+    {
+     "label": "731300",
+     "score": 0.6776,
+     "detail": "Iron of steel; barbed wire, twisted hoop or single flat wire and loosely twisted double wire, used for fencing"
+    }
+   ],
+   "rank": null,
+   "latencyMs": 20.1
+  },
+  {
+   "id": "hs-059",
+   "input": "Aluminium foil, household rolls, 15 micron",
+   "expected": "7607",
+   "tags": [
+    "metals"
+   ],
+   "predictions": [
+    {
+     "label": "760711",
+     "score": 0.712,
+     "detail": "Aluminium; foil, (not backed), rolled (but not further worked), of a thickness not exceeding 0.2mm"
+    },
+    {
+     "label": "790500",
+     "score": 0.6917,
+     "detail": "Zinc; plates, sheets, strip and foil"
+    },
+    {
+     "label": "392111",
+     "score": 0.6754,
+     "detail": "Plastics; plates, sheets, film, foil and strip, of polymers of styrene, cellular"
+    },
+    {
+     "label": "760529",
+     "score": 0.6743,
+     "detail": "Aluminium; alloys, wire, maximum cross-sectional dimension is 7mm or less"
+    },
+    {
+     "label": "760612",
+     "score": 0.673,
+     "detail": "Aluminium; plates, sheets and strip, thickness exceeding 0.2mm, alloys, rectangular (including square)"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 18.9
+  },
+  {
+   "id": "hs-060",
+   "input": "Hot-rolled steel coils, non-alloy, width 1500 mm, 3 mm thick",
+   "expected": "7208",
+   "tags": [
+    "metals"
+   ],
+   "predictions": [
+    {
+     "label": "720839",
+     "score": 0.7667,
+     "detail": "Iron or non-alloy steel; in coils, without patterns in relief, flat-rolled, of a width 600mm or more, hot-rolled, of a thickness of less than 3mm"
+    },
+    {
+     "label": "720916",
+     "score": 0.7655,
+     "detail": "Iron or non-alloy steel; in coils, flat-rolled, width 600mm or more, cold-rolled, of a thickness exceeding 1mm but less than 3mm"
+    },
+    {
+     "label": "721114",
+     "score": 0.7638,
+     "detail": "Iron or non-alloy steel; flat-rolled, hot-rolled, of a width less than 600mm, 4.75mm thick or more, excluding those of item no. 7211.13"
+    },
+    {
+     "label": "721399",
+     "score": 0.7605,
+     "detail": "Iron or non-alloy steel; bars and rods, hot-rolled, in irregularly wound coils, n.e.c. in heading no. 7213, of circular cross-section measuring 14mm or more in diameter"
+    },
+    {
+     "label": "721914",
+     "score": 0.7517,
+     "detail": "Steel, stainless; flat-rolled, width 600mm or more, hot-rolled, in coils, of a thickness of less than 3mm"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 23
+  },
+  {
+   "id": "hs-061",
+   "input": "Copper cathodes, refined",
+   "expected": "7403",
+   "tags": [
+    "metals"
+   ],
+   "predictions": [
+    {
+     "label": "740311",
+     "score": 0.8038,
+     "detail": "Copper; refined, unwrought, cathodes and sections of cathodes"
+    },
+    {
+     "label": "740200",
+     "score": 0.7579,
+     "detail": "Copper; unrefined, copper anodes for electrolytic refining"
+    },
+    {
+     "label": "741110",
+     "score": 0.7555,
+     "detail": "Copper; tubes and pipes, of refined copper"
+    },
+    {
+     "label": "740710",
+     "score": 0.7153,
+     "detail": "Copper; bars, rods and profiles, of refined copper"
+    },
+    {
+     "label": "741210",
+     "score": 0.7025,
+     "detail": "Copper; tube or pipe fittings (e.g. couplings, elbows, sleeves) of refined copper"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 20.2
+  },
+  {
+   "id": "hs-062",
+   "input": "Hex bolts with nuts, stainless steel",
+   "expected": "7318",
+   "tags": [
+    "metals"
+   ],
+   "predictions": [
+    {
+     "label": "731815",
+     "score": 0.7333,
+     "detail": "Iron or steel; threaded screws and bolts n.e.c. in item no. 7318.1, whether or not with their nuts or washers"
+    },
+    {
+     "label": "722211",
+     "score": 0.6974,
+     "detail": "Steel, stainless; bars and rods, hot-rolled, hot-drawn or extruded, of circular cross-section"
+    },
+    {
+     "label": "741533",
+     "score": 0.6944,
+     "detail": "Copper; screws, bolts and nuts, threaded"
+    },
+    {
+     "label": "722300",
+     "score": 0.6887,
+     "detail": "Steel, stainless; wire"
+    },
+    {
+     "label": "960719",
+     "score": 0.6882,
+     "detail": "Slide fasteners; other than those fitted with chain scoops of base metal"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 23.5
+  },
+  {
+   "id": "hs-063",
+   "input": "Wooden office desks",
+   "expected": "9403",
+   "tags": [
+    "consumer"
+   ],
+   "predictions": [
+    {
+     "label": "940330",
+     "score": 0.734,
+     "detail": "Furniture; wooden, for office use"
+    },
+    {
+     "label": "442191",
+     "score": 0.7124,
+     "detail": "Wood; of bamboo, articles n.e.c. in heading no. 4414 to 4420 (excluding clothes hangers)"
+    },
+    {
+     "label": "830400",
+     "score": 0.7055,
+     "detail": "Office equipment; filing cabinets, card-index cabinets, paper trays, paper rests, pen trays, office-stamp stands and similar office or desk equipment, of base metal, other than office furniture of heading no. 9403"
+    },
+    {
+     "label": "441891",
+     "score": 0.7038,
+     "detail": "Wood; builders' joinery and carpentry of wood n.e.c. in heading no. 4418, of bamboo"
+    },
+    {
+     "label": "441912",
+     "score": 0.701,
+     "detail": "Tableware and kitchenware, of wood; of bamboo, chopsticks"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 20.7
+  },
+  {
+   "id": "hs-064",
+   "input": "Children's plastic building block toys",
+   "expected": "9503",
+   "tags": [
+    "consumer"
+   ],
+   "predictions": [
+    {
+     "label": "392520",
+     "score": 0.6701,
+     "detail": "Plastics; builders' ware, doors, windows and their frames and thresholds for doors"
+    },
+    {
+     "label": "960621",
+     "score": 0.6399,
+     "detail": "Buttons; of plastics, not covered with textile material"
+    },
+    {
+     "label": "392340",
+     "score": 0.6144,
+     "detail": "Plastics; spools, cops, bobbins and similar supports, for the conveyance or packing of goods"
+    },
+    {
+     "label": "950300",
+     "score": 0.6105,
+     "detail": "Tricycles, scooters, pedal cars and similar wheeled toys; dolls' carriages; dolls; other toys; reduced-size (scale) models and similar recreational models, working or not; puzzles of all kinds"
+    },
+    {
+     "label": "392490",
+     "score": 0.608,
+     "detail": "Plastics; household articles and hygienic or toilet articles"
+    }
+   ],
+   "rank": 4,
+   "latencyMs": 21.1
+  },
+  {
+   "id": "hs-065",
+   "input": "Wristwatches, quartz, stainless steel case",
+   "expected": "9102",
+   "tags": [
+    "consumer"
+   ],
+   "predictions": [
+    {
+     "label": "911110",
+     "score": 0.7473,
+     "detail": "Watch cases; of precious metal or of metal clad with precious metal"
+    },
+    {
+     "label": "910191",
+     "score": 0.7389,
+     "detail": "Pocket-watches and other watches, including stop-watches; (excluding wrist-watches), with case of precious metal or of metal clad with precious metal, electrically operated"
+    },
+    {
+     "label": "911220",
+     "score": 0.713,
+     "detail": "Clock cases and similar cases for other goods of chapter 91; other than watch cases"
+    },
+    {
+     "label": "911320",
+     "score": 0.6662,
+     "detail": "Watch straps, watch bands, watch bracelets, and parts thereof; of base metal, whether or not gold- or silver-plated"
+    },
+    {
+     "label": "910221",
+     "score": 0.6646,
+     "detail": "Wrist-watches; whether or not incorporating a stop-watch facility, with automatic winding"
+    }
+   ],
+   "rank": 5,
+   "latencyMs": 22.1
+  },
+  {
+   "id": "hs-066",
+   "input": "Ceramic floor tiles, glazed",
+   "expected": "6907",
+   "tags": [
+    "consumer"
+   ],
+   "predictions": [
+    {
+     "label": "690410",
+     "score": 0.7633,
+     "detail": "Ceramic building bricks"
+    },
+    {
+     "label": "690510",
+     "score": 0.7227,
+     "detail": "Ceramic roofing tiles"
+    },
+    {
+     "label": "690740",
+     "score": 0.7113,
+     "detail": "Finishing ceramics"
+    },
+    {
+     "label": "691310",
+     "score": 0.6917,
+     "detail": "Ceramic statuettes and other ornamental ceramic articles, of porcelain or china"
+    },
+    {
+     "label": "691200",
+     "score": 0.6811,
+     "detail": "Ceramic tableware, kitchenware, other household articles and toilet articles; other than of porcelain or china"
+    }
+   ],
+   "rank": 3,
+   "latencyMs": 29.2
+  },
+  {
+   "id": "hs-067",
+   "input": "Float glass sheets, 6 mm, clear",
+   "expected": "7005",
+   "tags": [
+    "consumer"
+   ],
+   "predictions": [
+    {
+     "label": "700529",
+     "score": 0.7271,
+     "detail": "Glass; float glass and surface ground or polished glass, in sheets, non-wired, (other than coloured throughout the mass (body tinted), opacified, flashed or merely surface ground)"
+    },
+    {
+     "label": "700319",
+     "score": 0.6894,
+     "detail": "Glass; cast glass and rolled glass, non-wired sheets, (excluding those coloured throughout the mass (body tinted) opacified, flashed or having an absorbent or reflecting layer)"
+    },
+    {
+     "label": "440831",
+     "score": 0.687,
+     "detail": "Wood, tropical; as specified in Subheading Note 2 to this Chapter, dark red meranti, light red meranti, meranti bakau, sheets for veneer, plywood or other wood, sawn lengthwise, sliced or peeled, planed or not, sanded or end-jointed, not thicker than 6mm"
+    },
+    {
+     "label": "700490",
+     "score": 0.6685,
+     "detail": "Glass; drawn and blown, in sheets, (other than glass coloured throughout the mass (body tinted), opacified, flashed or having an absorbent, reflecting or non-reflecting layer)"
+    },
+    {
+     "label": "760611",
+     "score": 0.6483,
+     "detail": "Aluminium; plates, sheets and strip, thickness exceeding 0.2mm, (not alloyed), rectangular (including square)"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 23.1
+  },
+  {
+   "id": "hs-068",
+   "input": "Ballpoint pens",
+   "expected": "9608",
+   "tags": [
+    "consumer"
+   ],
+   "predictions": [
+    {
+     "label": "960860",
+     "score": 0.7363,
+     "detail": "Pens; ball-point, refills comprising the ball point and ink-reservoir"
+    },
+    {
+     "label": "848210",
+     "score": 0.6416,
+     "detail": "Ball bearings"
+    },
+    {
+     "label": "830400",
+     "score": 0.6325,
+     "detail": "Office equipment; filing cabinets, card-index cabinets, paper trays, paper rests, pen trays, office-stamp stands and similar office or desk equipment, of base metal, other than office furniture of heading no. 9403"
+    },
+    {
+     "label": "830590",
+     "score": 0.6304,
+     "detail": "Stationery; letter clips, letter corners, paper clips, indexing tags and similar office articles, including parts, of base metal"
+    },
+    {
+     "label": "480240",
+     "score": 0.6238,
+     "detail": "Uncoated paper and paperboard (not 4801 or 4803); wallpaper base, in rolls or sheets"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 17.9
+  },
+  {
+   "id": "hs-069",
+   "input": "Printed books",
+   "expected": "4901",
+   "tags": [
+    "consumer"
+   ],
+   "predictions": [
+    {
+     "label": "490300",
+     "score": 0.7787,
+     "detail": "Printed matter; children's picture, drawing or colouring books"
+    },
+    {
+     "label": "490191",
+     "score": 0.7582,
+     "detail": "Printed matter; dictionaries, encyclopaedias and serial instalments thereof"
+    },
+    {
+     "label": "491191",
+     "score": 0.7041,
+     "detail": "Printed matter; pictures, designs and photographs, n.e.c. in item no. 4911.10"
+    },
+    {
+     "label": "853400",
+     "score": 0.6938,
+     "detail": "Circuits; printed"
+    },
+    {
+     "label": "490520",
+     "score": 0.678,
+     "detail": "Maps and hydrographic or similar charts; printed in book form, including atlases, topographical plans and similar"
+    }
+   ],
+   "rank": 2,
+   "latencyMs": 17.7
+  },
+  {
+   "id": "hs-070",
+   "input": "Sunglasses",
+   "expected": "9004",
+   "tags": [
+    "consumer"
+   ],
+   "predictions": [
+    {
+     "label": "900410",
+     "score": 0.8186,
+     "detail": "Sunglasses; corrective, protective or other"
+    },
+    {
+     "label": "900319",
+     "score": 0.6972,
+     "detail": "Frames and mountings; for spectacles, goggles or the like, of materials other than plastics"
+    },
+    {
+     "label": "900211",
+     "score": 0.6909,
+     "detail": "Lenses; objective, for cameras, projectors or photographic enlargers or reducers, mounted, being parts or fittings for instruments or apparatus, of any material (excluding glass not optically worked)"
+    },
+    {
+     "label": "700910",
+     "score": 0.6698,
+     "detail": "Glass; rear-view mirrors for vehicles"
+    },
+    {
+     "label": "611239",
+     "score": 0.6624,
+     "detail": "Swimwear; men's or boys', of textile materials (other than synthetic fibres), knitted or crocheted"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 13.7
+  },
+  {
+   "id": "hs-071",
+   "input": "Mattresses, foam",
+   "expected": "9404",
+   "tags": [
+    "consumer"
+   ],
+   "predictions": [
+    {
+     "label": "940429",
+     "score": 0.7627,
+     "detail": "Mattresses; of other materials, not cellular rubber or plastics"
+    },
+    {
+     "label": "630640",
+     "score": 0.6675,
+     "detail": "Camping goods; pneumatic mattresses"
+    },
+    {
+     "label": "630140",
+     "score": 0.6547,
+     "detail": "Blankets (other than electric blankets) and travelling rugs; of synthetic fibres"
+    },
+    {
+     "label": "610712",
+     "score": 0.6539,
+     "detail": "Underpants and briefs; men's or boys', of man-made fibres, knitted or crocheted"
+    },
+    {
+     "label": "610839",
+     "score": 0.6503,
+     "detail": "Nightdresses and pyjamas; women's or girls', of textile materials (other than cotton or man-made fibres), knitted or crocheted"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 12.3
+  },
+  {
+   "id": "hs-072",
+   "input": "Gold jewellery, 22 carat necklaces",
+   "expected": "7113",
+   "tags": [
+    "consumer"
+   ],
+   "predictions": [
+    {
+     "label": "711320",
+     "score": 0.6268,
+     "detail": "Jewellery; of base metal clad with precious metal, and parts thereof"
+    },
+    {
+     "label": "701820",
+     "score": 0.6255,
+     "detail": "Glass microspheres; not exceeding 1mm in diameter"
+    },
+    {
+     "label": "710812",
+     "score": 0.6101,
+     "detail": "Metals; gold, non-monetary, unwrought (but not powder)"
+    },
+    {
+     "label": "711411",
+     "score": 0.6004,
+     "detail": "Silversmiths' wares; and parts thereof, of silver, whether or not plated or clad with other precious metal"
+    },
+    {
+     "label": "261610",
+     "score": 0.5927,
+     "detail": "Silver ores and concentrates"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 20.4
+  },
+  {
+   "id": "hs-073",
+   "input": "Cardboard boxes, corrugated",
+   "expected": "4819",
+   "tags": [
+    "consumer"
+   ],
+   "predictions": [
+    {
+     "label": "481910",
+     "score": 0.7216,
+     "detail": "Paper and paperboard; cartons, boxes and cases, of corrugated paper or paperboard"
+    },
+    {
+     "label": "480840",
+     "score": 0.6947,
+     "detail": "Paper and paperboard; kraft paper, creped or crinkled, whether or not embossed or perforated, in rolls or sheets, other than paper of heading 4803"
+    },
+    {
+     "label": "470710",
+     "score": 0.6801,
+     "detail": "Paper or paperboard; waste and scrap, of unbleached kraft paper or paperboard or corrugated paper or paperboard"
+    },
+    {
+     "label": "848050",
+     "score": 0.6529,
+     "detail": "Moulds; for glass"
+    },
+    {
+     "label": "481039",
+     "score": 0.6466,
+     "detail": "Kraft paper and paperboard; coated with kaolin or other inorganic substances only, for non-graphic purposes, n.e.c. in item no. 4810.31 and 4810.32, in rolls or sheets"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 19.9
+  },
+  {
+   "id": "hs-074",
+   "input": "Hoodies, cotton fleece, knitted",
+   "expected": "6110",
+   "tags": [
+    "jargon"
+   ],
+   "predictions": [
+    {
+     "label": "610910",
+     "score": 0.7229,
+     "detail": "T-shirts, singlets and other vests; of cotton, knitted or crocheted"
+    },
+    {
+     "label": "611120",
+     "score": 0.7184,
+     "detail": "Garments and clothing accessories; babies', of cotton, knitted or crocheted"
+    },
+    {
+     "label": "610332",
+     "score": 0.7139,
+     "detail": "Jackets and blazers; men's or boys', of cotton, knitted or crocheted"
+    },
+    {
+     "label": "630130",
+     "score": 0.7122,
+     "detail": "Blankets (other than electric blankets) and travelling rugs; of cotton"
+    },
+    {
+     "label": "610439",
+     "score": 0.7122,
+     "detail": "Jackets; women's or girls', of textile materials (other than wool or fine animal hair, cotton or synthetic fibres), knitted or crocheted"
+    }
+   ],
+   "rank": null,
+   "latencyMs": 16.5
+  },
+  {
+   "id": "hs-075",
+   "input": "Flip-flops, rubber",
+   "expected": "6402",
+   "tags": [
+    "jargon"
+   ],
+   "predictions": [
+    {
+     "label": "400700",
+     "score": 0.7463,
+     "detail": "Rubber; vulcanised, thread and cord"
+    },
+    {
+     "label": "401590",
+     "score": 0.7209,
+     "detail": "Rubber; vulcanised (other than hard rubber), articles of apparel and clothing accessories (other than gloves, mittens and mitts)"
+    },
+    {
+     "label": "640220",
+     "score": 0.7038,
+     "detail": "Footwear; with outer soles and uppers of rubber or plastics, upper straps or thongs assembled to the sole by plugs"
+    },
+    {
+     "label": "401150",
+     "score": 0.698,
+     "detail": "Rubber; new pneumatic tyres, of a kind used on bicycles"
+    },
+    {
+     "label": "401694",
+     "score": 0.6903,
+     "detail": "Rubber; vulcanised (other than hard rubber), boat or dock fenders, whether or not inflatable, of non-cellular rubber"
+    }
+   ],
+   "rank": 3,
+   "latencyMs": 16.7
+  },
+  {
+   "id": "hs-076",
+   "input": "Power banks 10000 mAh",
+   "expected": "8507",
+   "tags": [
+    "jargon"
+   ],
+   "predictions": [
+    {
+     "label": "841013",
+     "score": 0.7008,
+     "detail": "Turbines; hydraulic turbines and water wheels, of a power exceeding 10000kW"
+    },
+    {
+     "label": "850434",
+     "score": 0.6494,
+     "detail": "Transformers; n.e.c. in item no. 8504.2, having a power handling capacity exceeding 500kVA"
+    },
+    {
+     "label": "841122",
+     "score": 0.6446,
+     "detail": "Turbo-propellers; of a power exceeding 1100kW"
+    },
+    {
+     "label": "853329",
+     "score": 0.6155,
+     "detail": "Electrical resistors; fixed, for a power handling capacity exceeding 20W (including rheostats and potentiometers but excluding heating resistors and carbon resistors)"
+    },
+    {
+     "label": "850134",
+     "score": 0.6131,
+     "detail": "Electric motors and generators; DC, of an output exceeding 375kW"
+    }
+   ],
+   "rank": null,
+   "latencyMs": 15.1
+  },
+  {
+   "id": "hs-077",
+   "input": "Smartwatches with cellular connectivity",
+   "expected": "8517",
+   "tags": [
+    "jargon"
+   ],
+   "predictions": [
+    {
+     "label": "910199",
+     "score": 0.6196,
+     "detail": "Pocket-watches and other watches, including stop-watches; (excluding wrist-watches), with case of precious metal or of metal clad with precious metal, not electrically operated"
+    },
+    {
+     "label": "901410",
+     "score": 0.5954,
+     "detail": "Navigational instruments and appliances; direction finding compasses"
+    },
+    {
+     "label": "910291",
+     "score": 0.5902,
+     "detail": "Pocket watches and other watches, including stop-watches; (excluding wrist-watches), other than those of heading no. 9101, electrically operated"
+    },
+    {
+     "label": "852411",
+     "score": 0.5857,
+     "detail": "Flat panel display modules, whether or not incorporating touch-sensitive screens; of liquid crystals, without drivers or control circuits"
+    },
+    {
+     "label": "910310",
+     "score": 0.577,
+     "detail": "Clocks; with watch movements, electrically operated, excluding clocks of heading no. 9104"
+    }
+   ],
+   "rank": null,
+   "latencyMs": 14.7
+  },
+  {
+   "id": "hs-078",
+   "input": "Camera drones, under 250 g",
+   "expected": "8806",
+   "tags": [
+    "jargon"
+   ],
+   "predictions": [
+    {
+     "label": "880622",
+     "score": 0.6434,
+     "detail": "Unmanned aircraft; for remote-controlled flight only, for other than for carriage of passengers, with the maximum take-off weight of more than 250g but not more than 7kg"
+    },
+    {
+     "label": "900653",
+     "score": 0.6022,
+     "detail": "Cameras, photographic (excluding cinematographic), for roll film of a width of 35mm"
+    },
+    {
+     "label": "841112",
+     "score": 0.5989,
+     "detail": "Turbo-jets; of a thrust exceeding 25kN"
+    },
+    {
+     "label": "880220",
+     "score": 0.5831,
+     "detail": "Aeroplanes and other aircraft, except unmanned; of an unladen weight not exceeding 2000kg"
+    },
+    {
+     "label": "962000",
+     "score": 0.5807,
+     "detail": "Monopods, bipods, tripods and similar articles"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 18.9
+  },
+  {
+   "id": "hs-079",
+   "input": "Electric kick scooters",
+   "expected": "8711",
+   "tags": [
+    "jargon"
+   ],
+   "predictions": [
+    {
+     "label": "842531",
+     "score": 0.6228,
+     "detail": "Winches; capstans; powered by an electric motor"
+    },
+    {
+     "label": "871160",
+     "score": 0.6099,
+     "detail": "Motorcycles (including mopeds) and cycles; fitted with auxiliary motor, with electric motor for propulsion, with or without side-cars; side-cars"
+    },
+    {
+     "label": "850220",
+     "score": 0.608,
+     "detail": "Electric generating sets; with spark-ignition internal combustion piston engines"
+    },
+    {
+     "label": "870441",
+     "score": 0.5865,
+     "detail": "Vehicles; with both compression-ignition internal combustion piston engine (diesel/semi-diesel) and electric motor as motor for propulsion, unassembled as in section 14, (gvw not exceeding 5000kg), for the transport of goods, vans"
+    },
+    {
+     "label": "850450",
+     "score": 0.5863,
+     "detail": "Electrical inductors; n.e.c. in heading no. 8504"
+    }
+   ],
+   "rank": 2,
+   "latencyMs": 18.9
+  },
+  {
+   "id": "hs-080",
+   "input": "PV modules, bifacial",
+   "expected": "8541",
+   "tags": [
+    "jargon"
+   ],
+   "predictions": [
+    {
+     "label": "854143",
+     "score": 0.6712,
+     "detail": "Electrical apparatus; photosensitive semiconductor devices, photovoltaic cells assembled in modules or made up into panels"
+    },
+    {
+     "label": "852491",
+     "score": 0.6523,
+     "detail": "Flat panel display modules, whether or not incorporating touch-sensitive screens; of liquid crystals, with drivers or control circuits"
+    },
+    {
+     "label": "850171",
+     "score": 0.6029,
+     "detail": "Electric generators; photovoltaic DC generators, of an output not exceeding 50W"
+    },
+    {
+     "label": "282560",
+     "score": 0.5873,
+     "detail": "Germanium oxides and zirconium dioxide"
+    },
+    {
+     "label": "800300",
+     "score": 0.5847,
+     "detail": "Tin; bars, rods, profiles and wire"
+    }
+   ],
+   "rank": 1,
+   "latencyMs": 18.1
+  }
+ ]
+}

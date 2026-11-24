@@ -1,0 +1,651 @@
+{
+  "id": "hs-classification",
+  "name": "HS code classification",
+  "description": "Commercial goods descriptions labelled with the correct 4-digit Harmonized System heading. A prediction counts as correct when its 6-digit code falls under the expected heading. Search space: all 5,612 HS subheadings (public UN Comtrade nomenclature, ODC-PDDL).",
+  "matcher": {
+    "type": "prefix",
+    "length": 4
+  },
+  "examples": [
+    {
+      "id": "hs-001",
+      "input": "Centrifugal water pump, electric, 2 HP, for domestic use",
+      "expected": "8413",
+      "tags": [
+        "machinery"
+      ]
+    },
+    {
+      "id": "hs-002",
+      "input": "Gear pump assembly, cast iron, 40 L/min",
+      "expected": "8413",
+      "tags": [
+        "machinery"
+      ]
+    },
+    {
+      "id": "hs-003",
+      "input": "Stainless steel ball valves, 2 inch",
+      "expected": "8481",
+      "tags": [
+        "machinery"
+      ]
+    },
+    {
+      "id": "hs-004",
+      "input": "Split-unit wall air conditioners 1.5 ton",
+      "expected": "8415",
+      "tags": [
+        "machinery"
+      ]
+    },
+    {
+      "id": "hs-005",
+      "input": "Laptops 14-inch, 1.3 kg",
+      "expected": "8471",
+      "tags": [
+        "machinery"
+      ]
+    },
+    {
+      "id": "hs-006",
+      "input": "Excavator bucket teeth and adapters",
+      "expected": "8431",
+      "tags": [
+        "machinery"
+      ]
+    },
+    {
+      "id": "hs-007",
+      "input": "Deep-groove ball bearings, 6204 series",
+      "expected": "8482",
+      "tags": [
+        "machinery"
+      ]
+    },
+    {
+      "id": "hs-008",
+      "input": "Household refrigerator-freezers, 300 litre, combined",
+      "expected": "8418",
+      "tags": [
+        "machinery"
+      ]
+    },
+    {
+      "id": "hs-009",
+      "input": "Front-loading washing machines, 8 kg capacity",
+      "expected": "8450",
+      "tags": [
+        "machinery"
+      ]
+    },
+    {
+      "id": "hs-010",
+      "input": "Forklift trucks, electric, 2.5 tonne",
+      "expected": "8427",
+      "tags": [
+        "machinery"
+      ]
+    },
+    {
+      "id": "hs-011",
+      "input": "Refrigerated shipping containers (reefers), 40 ft",
+      "expected": "8609",
+      "tags": [
+        "machinery"
+      ]
+    },
+    {
+      "id": "hs-012",
+      "input": "Diesel generator set 100 kVA",
+      "expected": "8502",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-013",
+      "input": "Lithium-ion battery packs for e-bikes, 48 V",
+      "expected": "8507",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-014",
+      "input": "Smartphones, 6.5-inch, dual SIM",
+      "expected": "8517",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-015",
+      "input": "55-inch 4K colour LED televisions",
+      "expected": "8528",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-016",
+      "input": "Monocrystalline PV panels 550 W, assembled modules",
+      "expected": "8541",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-017",
+      "input": "Electric motors, AC, three-phase, 7.5 kW",
+      "expected": "8501",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-018",
+      "input": "Insulated copper electrical cable, PVC sheathed, 4 mm2",
+      "expected": "8544",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-019",
+      "input": "LED lamps, E27 screw base, 9 W",
+      "expected": "8539",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-020",
+      "input": "Hair dryers, handheld, 2000 W",
+      "expected": "8516",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-021",
+      "input": "Printed circuit boards, bare, multilayer",
+      "expected": "8534",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-022",
+      "input": "Wireless earbuds, Bluetooth",
+      "expected": "8518",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-023",
+      "input": "IP CCTV cameras for surveillance",
+      "expected": "8525",
+      "tags": [
+        "electrical"
+      ]
+    },
+    {
+      "id": "hs-024",
+      "input": "Passenger cars, petrol engine 1.5 litre, 5 seats",
+      "expected": "8703",
+      "tags": [
+        "vehicles"
+      ]
+    },
+    {
+      "id": "hs-025",
+      "input": "Motorcycles, 150 cc petrol engine",
+      "expected": "8711",
+      "tags": [
+        "vehicles"
+      ]
+    },
+    {
+      "id": "hs-026",
+      "input": "Pneumatic radial tyres for passenger cars, new, rubber",
+      "expected": "4011",
+      "tags": [
+        "vehicles"
+      ]
+    },
+    {
+      "id": "hs-027",
+      "input": "Brake pads for cars",
+      "expected": "8708",
+      "tags": [
+        "vehicles"
+      ]
+    },
+    {
+      "id": "hs-028",
+      "input": "Bicycles, non-motorised, 26-inch wheels",
+      "expected": "8712",
+      "tags": [
+        "vehicles"
+      ]
+    },
+    {
+      "id": "hs-029",
+      "input": "Cotton crew-neck T-shirts, knitted",
+      "expected": "6109",
+      "tags": [
+        "textiles"
+      ]
+    },
+    {
+      "id": "hs-030",
+      "input": "Men's denim jeans, woven cotton",
+      "expected": "6203",
+      "tags": [
+        "textiles"
+      ]
+    },
+    {
+      "id": "hs-031",
+      "input": "Women's knitted pullovers, wool",
+      "expected": "6110",
+      "tags": [
+        "textiles"
+      ]
+    },
+    {
+      "id": "hs-032",
+      "input": "Bath towels, cotton terry fabric",
+      "expected": "6302",
+      "tags": [
+        "textiles"
+      ]
+    },
+    {
+      "id": "hs-033",
+      "input": "Running shoes with rubber soles and textile uppers",
+      "expected": "6404",
+      "tags": [
+        "textiles"
+      ]
+    },
+    {
+      "id": "hs-034",
+      "input": "Leather handbags",
+      "expected": "4202",
+      "tags": [
+        "textiles"
+      ]
+    },
+    {
+      "id": "hs-035",
+      "input": "Polyester filament yarn, textured, not for retail sale",
+      "expected": "5402",
+      "tags": [
+        "textiles"
+      ]
+    },
+    {
+      "id": "hs-036",
+      "input": "Basmati rice, wholly milled, 25 kg bags",
+      "expected": "1006",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-037",
+      "input": "Roasted coffee beans, not decaffeinated",
+      "expected": "0901",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-038",
+      "input": "Black tea in packets of 500 g",
+      "expected": "0902",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-039",
+      "input": "Frozen shrimp, peeled",
+      "expected": "0306",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-040",
+      "input": "Fresh bananas, Cavendish",
+      "expected": "0803",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-041",
+      "input": "Refined white cane sugar",
+      "expected": "1701",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-042",
+      "input": "Crude palm oil",
+      "expected": "1511",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-043",
+      "input": "Frozen boneless beef cuts",
+      "expected": "0202",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-044",
+      "input": "Wheat flour",
+      "expected": "1101",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-045",
+      "input": "Cashew nuts, shelled",
+      "expected": "0801",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-046",
+      "input": "Fresh apples",
+      "expected": "0808",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-047",
+      "input": "Sparkling wine",
+      "expected": "2204",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-048",
+      "input": "Dark chocolate bars",
+      "expected": "1806",
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "hs-049",
+      "input": "Polyethylene granules, LDPE, specific gravity below 0.94",
+      "expected": "3901",
+      "tags": [
+        "chemicals"
+      ]
+    },
+    {
+      "id": "hs-050",
+      "input": "Paracetamol tablets packaged for retail sale",
+      "expected": "3004",
+      "tags": [
+        "chemicals"
+      ]
+    },
+    {
+      "id": "hs-051",
+      "input": "Urea fertiliser, granular",
+      "expected": "3102",
+      "tags": [
+        "chemicals"
+      ]
+    },
+    {
+      "id": "hs-052",
+      "input": "Shampoo, 400 ml bottles",
+      "expected": "3305",
+      "tags": [
+        "chemicals"
+      ]
+    },
+    {
+      "id": "hs-053",
+      "input": "Portland cement, grey",
+      "expected": "2523",
+      "tags": [
+        "chemicals"
+      ]
+    },
+    {
+      "id": "hs-054",
+      "input": "Plastic water bottles, PET, empty",
+      "expected": "3923",
+      "tags": [
+        "chemicals"
+      ]
+    },
+    {
+      "id": "hs-055",
+      "input": "Hydraulic pump valve seals, nitrile rubber",
+      "expected": "4016",
+      "tags": [
+        "chemicals"
+      ]
+    },
+    {
+      "id": "hs-056",
+      "input": "Liquefied petroleum gas, propane",
+      "expected": "2711",
+      "tags": [
+        "chemicals"
+      ]
+    },
+    {
+      "id": "hs-057",
+      "input": "Toothpaste",
+      "expected": "3306",
+      "tags": [
+        "chemicals"
+      ]
+    },
+    {
+      "id": "hs-058",
+      "input": "Steel wire nails",
+      "expected": "7317",
+      "tags": [
+        "metals"
+      ]
+    },
+    {
+      "id": "hs-059",
+      "input": "Aluminium foil, household rolls, 15 micron",
+      "expected": "7607",
+      "tags": [
+        "metals"
+      ]
+    },
+    {
+      "id": "hs-060",
+      "input": "Hot-rolled steel coils, non-alloy, width 1500 mm, 3 mm thick",
+      "expected": "7208",
+      "tags": [
+        "metals"
+      ]
+    },
+    {
+      "id": "hs-061",
+      "input": "Copper cathodes, refined",
+      "expected": "7403",
+      "tags": [
+        "metals"
+      ]
+    },
+    {
+      "id": "hs-062",
+      "input": "Hex bolts with nuts, stainless steel",
+      "expected": "7318",
+      "tags": [
+        "metals"
+      ]
+    },
+    {
+      "id": "hs-063",
+      "input": "Wooden office desks",
+      "expected": "9403",
+      "tags": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "hs-064",
+      "input": "Children's plastic building block toys",
+      "expected": "9503",
+      "tags": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "hs-065",
+      "input": "Wristwatches, quartz, stainless steel case",
+      "expected": "9102",
+      "tags": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "hs-066",
+      "input": "Ceramic floor tiles, glazed",
+      "expected": "6907",
+      "tags": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "hs-067",
+      "input": "Float glass sheets, 6 mm, clear",
+      "expected": "7005",
+      "tags": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "hs-068",
+      "input": "Ballpoint pens",
+      "expected": "9608",
+      "tags": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "hs-069",
+      "input": "Printed books",
+      "expected": "4901",
+      "tags": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "hs-070",
+      "input": "Sunglasses",
+      "expected": "9004",
+      "tags": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "hs-071",
+      "input": "Mattresses, foam",
+      "expected": "9404",
+      "tags": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "hs-072",
+      "input": "Gold jewellery, 22 carat necklaces",
+      "expected": "7113",
+      "tags": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "hs-073",
+      "input": "Cardboard boxes, corrugated",
+      "expected": "4819",
+      "tags": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "hs-074",
+      "input": "Hoodies, cotton fleece, knitted",
+      "expected": "6110",
+      "tags": [
+        "jargon"
+      ]
+    },
+    {
+      "id": "hs-075",
+      "input": "Flip-flops, rubber",
+      "expected": "6402",
+      "tags": [
+        "jargon"
+      ]
+    },
+    {
+      "id": "hs-076",
+      "input": "Power banks 10000 mAh",
+      "expected": "8507",
+      "tags": [
+        "jargon"
+      ]
+    },
+    {
+      "id": "hs-077",
+      "input": "Smartwatches with cellular connectivity",
+      "expected": "8517",
+      "tags": [
+        "jargon"
+      ]
+    },
+    {
+      "id": "hs-078",
+      "input": "Camera drones, under 250 g",
+      "expected": "8806",
+      "tags": [
+        "jargon"
+      ]
+    },
+    {
+      "id": "hs-079",
+      "input": "Electric kick scooters",
+      "expected": "8711",
+      "tags": [
+        "jargon"
+      ]
+    },
+    {
+      "id": "hs-080",
+      "input": "PV modules, bifacial",
+      "expected": "8541",
+      "tags": [
+        "jargon"
+      ]
+    }
+  ]
+}

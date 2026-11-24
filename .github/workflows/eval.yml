@@ -1,0 +1,36 @@
+name: Eval
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+
+      # The embedding model and the embedded HS corpus are cached between runs.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .cache
+            node_modules/@huggingface/transformers/.cache
+          key: eval-${{ hashFiles('evals/datasets/**/corpus.json', 'src/pipelines/embeddings.ts') }}
+
+      # Fails the job if any pipeline's top-1 accuracy drops more than 2 points
+      # below its latest committed run.
+      - name: Eval quality gate
+        run: npm run eval:check
+
+      - run: npm run build
